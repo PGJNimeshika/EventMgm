@@ -177,6 +177,9 @@ public class EventDetails extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtDescription = new javax.swing.JTextArea();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 204, 255));
@@ -207,7 +210,7 @@ public class EventDetails extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(750, 260, 540, 310);
         getContentPane().add(jDateEstart);
-        jDateEstart.setBounds(320, 250, 200, 20);
+        jDateEstart.setBounds(320, 240, 200, 20);
 
         label3.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         label3.setText("Start Date");
@@ -228,7 +231,7 @@ public class EventDetails extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnDelete);
-        btnDelete.setBounds(330, 500, 110, 40);
+        btnDelete.setBounds(270, 500, 110, 40);
 
         btnUpdate.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         btnUpdate.setText("Update");
@@ -239,7 +242,7 @@ public class EventDetails extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnUpdate);
-        btnUpdate.setBounds(210, 500, 100, 40);
+        btnUpdate.setBounds(150, 500, 100, 40);
 
         btnInsert.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         btnInsert.setText("Insert");
@@ -250,7 +253,7 @@ public class EventDetails extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnInsert);
-        btnInsert.setBounds(90, 500, 100, 40);
+        btnInsert.setBounds(30, 500, 100, 40);
 
         jTable1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -277,14 +280,14 @@ public class EventDetails extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnHome);
-        btnHome.setBounds(470, 500, 190, 40);
+        btnHome.setBounds(540, 500, 190, 40);
         getContentPane().add(txtEvenue);
         txtEvenue.setBounds(320, 330, 200, 20);
 
         label1.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         label1.setText("Event ID");
         getContentPane().add(label1);
-        label1.setBounds(140, 150, 140, 25);
+        label1.setBounds(140, 130, 140, 25);
 
         txtEid.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -292,7 +295,7 @@ public class EventDetails extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtEid);
-        txtEid.setBounds(320, 150, 200, 20);
+        txtEid.setBounds(320, 130, 200, 20);
 
         label5.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         label5.setText("End Date");
@@ -304,14 +307,31 @@ public class EventDetails extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabel3.setText("Discription");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(140, 380, 110, 21);
+        jLabel3.setBounds(140, 390, 110, 21);
 
         txtDescription.setColumns(20);
         txtDescription.setRows(5);
         jScrollPane2.setViewportView(txtDescription);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(320, 370, 200, 96);
+        jScrollPane2.setBounds(320, 390, 200, 96);
+
+        jLabel6.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel6.setText("Customer ID");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(140, 164, 120, 30);
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(320, 170, 200, 20);
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton1.setText("Search");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(400, 503, 110, 40);
 
         setSize(new java.awt.Dimension(1384, 767));
         setLocationRelativeTo(null);
@@ -341,8 +361,12 @@ public class EventDetails extends javax.swing.JFrame {
 
     private void txtEidKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEidKeyReleased
 
-        Search();
+        
     }//GEN-LAST:event_txtEidKeyReleased
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Search();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -384,6 +408,7 @@ public class EventDetails extends javax.swing.JFrame {
     private javax.swing.JToggleButton btnHome;
     private javax.swing.JButton btnInsert;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.JButton jButton1;
     private com.toedter.calendar.JDateChooser jDateEend;
     private com.toedter.calendar.JDateChooser jDateEstart;
     private javax.swing.JLabel jLabel1;
@@ -391,9 +416,11 @@ public class EventDetails extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
     private java.awt.Label label1;
     private java.awt.Label label2;
     private java.awt.Label label3;

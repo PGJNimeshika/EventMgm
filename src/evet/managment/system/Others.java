@@ -39,9 +39,11 @@ public class Others extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        label4 = new java.awt.Label();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        label4 = new java.awt.Label();
+        jTextField2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -108,18 +110,24 @@ public class Others extends javax.swing.JFrame {
         getContentPane().add(jScrollPane2);
         jScrollPane2.setBounds(670, 470, 580, 90);
 
-        label4.setBackground(new java.awt.Color(255, 255, 255));
-        label4.setFont(new java.awt.Font("Californian FB", 1, 36)); // NOI18N
-        label4.setForeground(new java.awt.Color(153, 0, 0));
-        label4.setText("Others");
-        getContentPane().add(label4);
-        label4.setBounds(730, 50, 140, 50);
-
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Sandu\\Documents\\NetBeansProjects\\Event_Management_System\\src\\images\\C__Data_Users_DefApps_AppData_INTERNETEXPLORER_Temp_Saved Images_7933828-silhouette-of-a-large-group-of-people-dancing-on-a-white-oedJ65-clipart.jpg")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(10, 40, 620, 600);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel2.setText("Customer ID");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 120, -1, -1));
+
+        label4.setBackground(new java.awt.Color(255, 255, 255));
+        label4.setFont(new java.awt.Font("Californian FB", 1, 36)); // NOI18N
+        label4.setForeground(new java.awt.Color(153, 0, 0));
+        label4.setText("Others");
+        jPanel1.add(label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, 140, 50));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 110, 210, 30));
+
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1460, 770);
 
@@ -167,12 +175,14 @@ public class Others extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private java.awt.Label label1;
     private java.awt.Label label2;
     private java.awt.Label label3;

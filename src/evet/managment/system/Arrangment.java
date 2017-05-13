@@ -37,6 +37,8 @@ public class Arrangment extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jTextField3 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jTextField4 = new javax.swing.JTextField();
@@ -54,23 +56,23 @@ public class Arrangment extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(790, 320, 250, 30);
+        jTextField1.setBounds(810, 370, 250, 30);
         getContentPane().add(jDateChooser1);
-        jDateChooser1.setBounds(790, 150, 250, 30);
+        jDateChooser1.setBounds(810, 200, 250, 30);
 
         jRadioButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jRadioButton1.setText("Yes");
         getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(790, 270, 60, 25);
+        jRadioButton1.setBounds(820, 310, 60, 25);
 
         jRadioButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jRadioButton2.setText("No");
         getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(890, 270, 50, 25);
+        jRadioButton2.setBounds(910, 310, 50, 25);
 
         jButton1.setText("Search");
         getContentPane().add(jButton1);
-        jButton1.setBounds(970, 270, 80, 23);
+        jButton1.setBounds(980, 310, 80, 23);
 
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,7 +80,7 @@ public class Arrangment extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(790, 380, 250, 30);
+        jTextField2.setBounds(810, 420, 250, 30);
 
         jButton2.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         jButton2.setText("Insert");
@@ -95,7 +97,14 @@ public class Arrangment extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(1140, 270, 130, 40);
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(790, 440, 250, 30);
+        jTextField3.setBounds(810, 470, 250, 30);
+
+        jLabel10.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel10.setText("Customer ID");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(590, 110, 150, 21);
+        getContentPane().add(jTextField6);
+        jTextField6.setBounds(810, 100, 240, 30);
 
         jTable1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -114,9 +123,9 @@ public class Arrangment extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(550, 540, 710, 90);
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(790, 210, 250, 30);
+        jTextField4.setBounds(810, 250, 250, 30);
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(790, 90, 250, 30);
+        jTextField5.setBounds(810, 150, 250, 30);
 
         jLabel2.setFont(new java.awt.Font("Californian FB", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 0, 0));
@@ -127,37 +136,37 @@ public class Arrangment extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabel3.setText("Arrangment ID");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(590, 100, 170, 21);
+        jLabel3.setBounds(590, 160, 170, 21);
 
         jLabel4.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabel4.setText("Date");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(590, 160, 70, 21);
+        jLabel4.setBounds(590, 210, 70, 21);
 
         jLabel5.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabel5.setText("Menu");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(590, 260, 70, 50);
+        jLabel5.setBounds(590, 310, 70, 50);
 
         jLabel6.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabel6.setText("Time");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(590, 220, 70, 21);
+        jLabel6.setBounds(590, 260, 70, 21);
 
         jLabel7.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabel7.setText("Phone Number");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(590, 330, 160, 21);
+        jLabel7.setBounds(560, 380, 160, 21);
 
         jLabel8.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabel8.setText("Amount");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(590, 390, 90, 21);
+        jLabel8.setBounds(560, 430, 90, 21);
 
         jLabel9.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabel9.setText("Numbers of inviters");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(590, 450, 240, 21);
+        jLabel9.setBounds(560, 480, 240, 21);
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Sandu\\Documents\\NetBeansProjects\\Event_Management_System\\src\\images\\pexels-photo-281624.jpeg")); // NOI18N
         getContentPane().add(jLabel1);
@@ -212,6 +221,7 @@ public class Arrangment extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -229,5 +239,6 @@ public class Arrangment extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 }

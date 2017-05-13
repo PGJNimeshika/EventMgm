@@ -31,10 +31,6 @@ public class Parties extends javax.swing.JFrame {
         label2 = new java.awt.Label();
         label3 = new java.awt.Label();
         label4 = new java.awt.Label();
-        label5 = new java.awt.Label();
-        label6 = new java.awt.Label();
-        label7 = new java.awt.Label();
-        label8 = new java.awt.Label();
         label9 = new java.awt.Label();
         label10 = new java.awt.Label();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -42,13 +38,6 @@ public class Parties extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
@@ -57,6 +46,17 @@ public class Parties extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        label6 = new java.awt.Label();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jButton1 = new javax.swing.JButton();
+        label7 = new java.awt.Label();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        label8 = new java.awt.Label();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -83,26 +83,6 @@ public class Parties extends javax.swing.JFrame {
         getContentPane().add(label4);
         label4.setBounds(80, 380, 90, 25);
 
-        label5.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        label5.setText("Phone Number");
-        getContentPane().add(label5);
-        label5.setBounds(80, 430, 150, 25);
-
-        label6.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        label6.setText("Menu");
-        getContentPane().add(label6);
-        label6.setBounds(80, 480, 70, 25);
-
-        label7.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        label7.setText("Decoration types");
-        getContentPane().add(label7);
-        label7.setBounds(80, 530, 160, 25);
-
-        label8.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        label8.setText("Description");
-        getContentPane().add(label8);
-        label8.setBounds(80, 580, 120, 25);
-
         label9.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         label9.setText("Date");
         getContentPane().add(label9);
@@ -124,34 +104,6 @@ public class Parties extends javax.swing.JFrame {
         jTextField2.setBounds(300, 330, 210, 30);
         getContentPane().add(jTextField3);
         jTextField3.setBounds(300, 380, 210, 30);
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(300, 430, 210, 30);
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(300, 580, 210, 96);
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "choose....", "Flowers", "Lights", "Candles", " " }));
-        getContentPane().add(jComboBox2);
-        jComboBox2.setBounds(300, 530, 210, 30);
-
-        jRadioButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jRadioButton1.setText("Yes");
-        getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(300, 490, 49, 25);
-
-        jRadioButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jRadioButton2.setText("No");
-        getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(370, 490, 45, 25);
-
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton1.setText("Search");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(450, 490, 73, 23);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -195,6 +147,46 @@ public class Parties extends javax.swing.JFrame {
         jLabel1.setBounds(774, 424, 430, 230);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel2.setText("Customer ID");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, -1, -1));
+        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 130, 210, 30));
+
+        label6.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        label6.setText("Menu");
+        jPanel1.add(label6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, 70, -1));
+
+        jRadioButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jRadioButton1.setText("Yes");
+        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 450, -1, -1));
+
+        jRadioButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jRadioButton2.setText("No");
+        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 450, -1, -1));
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton1.setText("Search");
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 450, -1, -1));
+
+        label7.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        label7.setText("Decoration types");
+        jPanel1.add(label7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 500, -1, -1));
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "choose....", "Flowers", "Lights", "Candles", " " }));
+        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 500, 210, 30));
+
+        label8.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        label8.setText("Description");
+        jPanel1.add(label8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 560, 120, -1));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 560, 210, -1));
+
         getContentPane().add(jPanel1);
         jPanel1.setBounds(-10, 0, 1470, 700);
 
@@ -246,6 +238,7 @@ public class Parties extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox2;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
@@ -256,13 +249,12 @@ public class Parties extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     private java.awt.Label label1;
     private java.awt.Label label10;
     private java.awt.Label label2;
     private java.awt.Label label3;
     private java.awt.Label label4;
-    private java.awt.Label label5;
     private java.awt.Label label6;
     private java.awt.Label label7;
     private java.awt.Label label8;

@@ -5,6 +5,13 @@
  */
 package evet.managment.system;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Dewanganii
@@ -27,15 +34,15 @@ public class BusinessCo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        label1 = new java.awt.Label();
         label2 = new java.awt.Label();
         label3 = new java.awt.Label();
         label4 = new java.awt.Label();
         label5 = new java.awt.Label();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        Date = new com.toedter.calendar.JDateChooser();
+        time = new javax.swing.JTextField();
+        h_no = new javax.swing.JTextField();
+        amount = new javax.swing.JTextField();
+        jButton5 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
@@ -43,19 +50,15 @@ public class BusinessCo extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         label6 = new java.awt.Label();
-        jTextField4 = new javax.swing.JTextField();
+        inviters = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        label1 = new java.awt.Label();
+        cusid = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
-
-        label1.setBackground(new java.awt.Color(255, 255, 255));
-        label1.setFont(new java.awt.Font("Californian FB", 1, 36)); // NOI18N
-        label1.setForeground(new java.awt.Color(153, 0, 0));
-        label1.setText("Business Conference");
-        getContentPane().add(label1);
-        label1.setBounds(110, 70, 400, 46);
 
         label2.setBackground(new java.awt.Color(0, 0, 0));
         label2.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
@@ -84,24 +87,34 @@ public class BusinessCo extends javax.swing.JFrame {
         label5.setText("Amount");
         getContentPane().add(label5);
         label5.setBounds(120, 360, 90, 25);
-        getContentPane().add(jDateChooser1);
-        jDateChooser1.setBounds(310, 180, 210, 30);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(310, 240, 210, 30);
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(310, 300, 210, 30);
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(310, 360, 210, 30);
+        getContentPane().add(Date);
+        Date.setBounds(310, 180, 210, 30);
+        getContentPane().add(time);
+        time.setBounds(310, 240, 210, 30);
+        getContentPane().add(h_no);
+        h_no.setBounds(310, 300, 210, 30);
+        getContentPane().add(amount);
+        amount.setBounds(310, 360, 210, 30);
+
+        jButton5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton5.setText("Search");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5);
+        jButton5.setBounds(1000, 323, 100, 40);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Date", "Time", "Hall Number", "Amount", "No of Inviters"
+                "cus_id", "Date", "Time", "Hall Number", "Amount", "No of Inviters"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -111,23 +124,38 @@ public class BusinessCo extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         jButton1.setText("Insert");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
-        jButton1.setBounds(660, 320, 120, 40);
+        jButton1.setBounds(560, 320, 120, 40);
 
         jButton2.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         jButton2.setText("Update");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
-        jButton2.setBounds(810, 320, 120, 40);
+        jButton2.setBounds(710, 320, 120, 40);
 
         jButton3.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         jButton3.setText("Delete");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3);
-        jButton3.setBounds(960, 320, 120, 40);
+        jButton3.setBounds(850, 320, 120, 40);
 
         jButton4.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
         jButton4.setText("Go to the Hme page");
         getContentPane().add(jButton4);
-        jButton4.setBounds(1100, 320, 180, 40);
+        jButton4.setBounds(1120, 320, 180, 40);
 
         label6.setBackground(new java.awt.Color(0, 0, 0));
         label6.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
@@ -135,8 +163,8 @@ public class BusinessCo extends javax.swing.JFrame {
         label6.setText("No Of Inviters");
         getContentPane().add(label6);
         label6.setBounds(120, 420, 140, 25);
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(310, 420, 210, 30);
+        getContentPane().add(inviters);
+        inviters.setBounds(310, 420, 210, 30);
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Sandu\\Documents\\NetBeansProjects\\Event_Management_System\\src\\images\\b.jpg")); // NOI18N
@@ -144,12 +172,94 @@ public class BusinessCo extends javax.swing.JFrame {
         jLabel1.setBounds(394, 314, 930, 320);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        label1.setBackground(new java.awt.Color(255, 255, 255));
+        label1.setFont(new java.awt.Font("Californian FB", 1, 36)); // NOI18N
+        label1.setForeground(new java.awt.Color(153, 0, 0));
+        label1.setText("Business Conference");
+        jPanel1.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 400, -1));
+        jPanel1.add(cusid, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 130, 210, 30));
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Customer ID");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 134, 140, 20));
+
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1370, 870);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Insert();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Update();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        Delete();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        Search();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    
+      public void Delete() {
+
+        try {
+
+            //show confirm msg box
+            int x = JOptionPane.showConfirmDialog(rootPane, "Do you want to Delete this Record ? ");
+
+            if (x == 0) {
+
+                Connection c = DB.mycon();
+                Statement s = c.createStatement();
+                s.executeUpdate("DELETE FROM business_conference WHERE cus_id='" + cusid.getText() + "'");
+                JOptionPane.showMessageDialog(rootPane, "record has been not Deleted successfully ");
+                
+                Clearall();
+
+            } else if (x == 1) {
+                Clearall();
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+      
+       public void Search() {
+        try {
+
+            Connection c = DB.mycon();
+            Statement s = c.createStatement();
+            ResultSet rs = s.executeQuery("SELECT * FROM business_conference WHERE cus_id='" + cusid.getText() + "'");
+
+            SimpleDateFormat Esdate = new SimpleDateFormat("yyyy-MM-dd");
+            
+
+            while (rs.next()) {
+                cusid.setText(rs.getString("cus_id"));
+                Date.setDate(Esdate.parse(rs.getString("date")));
+                time.setText(rs.getString("time"));
+                h_no.setText(rs.getString("h_no"));
+             
+/*cus_id,date,time,h_no,amount,no_of_inviters*/
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -184,26 +294,99 @@ public class BusinessCo extends javax.swing.JFrame {
             }
         });
     }
+    
+    
+     public void Clearall() {
+
+        cusid.setText("");
+        Date.setCalendar(null);
+        time.setText("");
+        h_no.setText("");
+        amount.setText("");
+        inviters.setText("");
+
+    }
+    public void Update() {
+
+        try {
+
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+            String UpDate = sdf.format(Date.getDate());
+
+            //show confirm msg box
+            int x = JOptionPane.showConfirmDialog(rootPane, "Do you want to Update this Record ? ");
+
+            if (x == 0) {
+
+                Connection c = DB.mycon();
+                Statement s = c.createStatement();
+                s.executeUpdate("UPDATE business_conference SET cus_id = '" + cusid.getText() + "',date = '" + UpDate + "',time = '" + time.getText() + "',h_no = '" + h_no.getText() + "',amount = '" + amount.getText() + "',no_of_inviters = '" + inviters.getText() + "'where cus_id = '" + cusid.getText() + "' ");
+                JOptionPane.showMessageDialog(rootPane, "record has been Updated successfully ");
+                                                                         
+                                                                        
+                Clearall();
+
+            } else if (x == 1) {
+                Clearall();
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+    
+     public void Insert() {
+
+        try {
+            //show confirm msg box
+            int x = JOptionPane.showConfirmDialog(rootPane, "Do you want to save this Record ? ");
+
+            if (x == 0) {
+
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+                String jDate = sdf.format(Date.getDate());
+                
+
+                Connection c = DB.mycon();
+                Statement s = c.createStatement();
+                s.executeUpdate("INSERT INTO business_conference (cus_id,date,time,h_no,amount,no_of_inviters) values('" + cusid.getText() + "','" + jDate + "','" + time.getText() + "','" + h_no.getText() + "','" + amount.getText() + "','" + inviters.getText() + "')");
+                JOptionPane.showMessageDialog(rootPane, "record has been saved successfully");
+
+                Clearall();
+
+            } else if (x == 1) {
+                Clearall();
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.toedter.calendar.JDateChooser Date;
+    private javax.swing.JTextField amount;
+    private javax.swing.JTextField cusid;
+    private javax.swing.JTextField h_no;
+    private javax.swing.JTextField inviters;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private java.awt.Label label1;
     private java.awt.Label label2;
     private java.awt.Label label3;
     private java.awt.Label label4;
     private java.awt.Label label5;
     private java.awt.Label label6;
+    private javax.swing.JTextField time;
     // End of variables declaration//GEN-END:variables
 }

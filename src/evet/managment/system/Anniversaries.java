@@ -42,6 +42,8 @@ public class Anniversaries extends javax.swing.JFrame {
         jRadioButton2 = new javax.swing.JRadioButton();
         jToggleButton1 = new javax.swing.JToggleButton();
         amount = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
@@ -93,6 +95,13 @@ public class Anniversaries extends javax.swing.JFrame {
         jToggleButton1.setBounds(430, 510, 90, 23);
         getContentPane().add(amount);
         amount.setBounds(280, 560, 190, 30);
+
+        jLabel11.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel11.setText("Customer ID");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(120, 130, 140, 21);
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(280, 120, 190, 30);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -325,6 +334,7 @@ public class Anniversaries extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -339,6 +349,7 @@ public class Anniversaries extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JTextField phone;
     private javax.swing.JTextField time;
